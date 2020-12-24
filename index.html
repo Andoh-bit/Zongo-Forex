@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zongo Forex Bureau</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+	<form id="rate">
+		<h2 style="color: green;">Zongo Forex Bureau</h2>
+		<select id="conversion" required>
+			<option valeu="">Select conversion</option>
+			<option valeu="cedis-to-dollars">Cedis to Dollars</option>
+			<option valeu="dollars-to-cedis">Dollars to Cedis</option>
+		</select> <br>
+		<input id="amount" type="number" placeholder="Enter amount" required><br>
+		<input type="submit" valeu="Get Exchange">
+
+		<div id="output"></div>
+
+	</form>
+  
+
+	<script type="text/javascript">
+	document.getElementById('rate').addEventListener( 'submit', function(event){
+			event.preventDefault()
+			var amount = document.getElementById('amount').valeu
+
+			var rate = 5.87
+
+			var conversion = document.getElementById(conversion).valeu
+			console.log(conversion)
+
+			var exchangAmount = (amount * rate)
+
+			document.getElementById('output').innerHTML = exchangAmount
+
+			if (conversion == 'dollars-to-cedis'){
+
+			//console.log(exchangAmount)
+}
+
+}) 
+</script>
+
+</body>
+</html>
